@@ -1,0 +1,5 @@
+.videos-list {
+    max-height: 350px;
+    overflow: hidden;
+    overflow-y: scroll;
+}

@@ -10,9 +10,9 @@ const initialState = [{
   },
   {
     id: "2WEKaVNO",
-    title: "Maroon 5 - Girls Like You ft. Cardi B",
-    artist: "Maroon 5",
-    url: "https://www.youtube.com/watch?v=aJOTlE1K90k"
+    title: "THUNDERCLOUDS",
+    artist: " LSD",
+    url: "https://vimeo.com/channels/staffpicks/287987985"
   }
 ];
 
