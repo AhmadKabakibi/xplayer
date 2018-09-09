@@ -1,0 +1,19 @@
+.video {
+    position: relative;
+    padding: 1rem;
+    color: #000;
+}
+
+.video__bar {
+    position: relative;
+    height: 0.25rem;
+    margin-top: 2rem;
+}
+
+.video__title {
+    font-weight: bold;
+}
+
+.video__artist {
+    font-weight: lighter;
+}

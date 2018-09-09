@@ -1,0 +1,50 @@
+.app-logo {
+  animation: app-logo-spin infinite 20s linear;
+  height: 50px;
+}
+
+.app-header {
+  display: flex;
+  background-color: #222;
+  height: 60px;
+  padding: 5px;
+  color: white;
+}
+
+.app-title {
+  font-size: 1.5em;
+}
+
+.app-intro {
+  font-size: large;
+}
+
+.button__holder {
+  display: grid;
+  grid-template-columns: minmax(100px, 0.2fr)  minmax(100px, 0.2fr);
+  grid-column-gap: 1rem;
+}
+
+.link__button {
+  display: block;
+  margin: 0;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border: none;
+  border-bottom: 2px solid rgba(0,0,0,0.3);
+  width: 100%;
+  background-color: cornflowerblue;
+  color: #fff;
+  font: inherit;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1;
+  border-radius: 0.15rem;
+  outline-color: #ccc;
+  cursor: pointer;
+}
+
+@keyframes app-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
