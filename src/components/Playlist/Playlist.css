@@ -3,3 +3,11 @@
     overflow: hidden;
     overflow-y: scroll;
 }
+
+.videos-list__item {
+    margin: 0.5em;
+    font: inherit;
+    font-size: 1em;
+    background: #ccc;
+    list-style: none;
+}

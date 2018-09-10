@@ -1,7 +1,8 @@
 .video {
+    font-size: 0.8em;
     position: relative;
     padding: 1rem;
-    color: #000;
+    color: #232323;
 }
 
 .video__bar {
