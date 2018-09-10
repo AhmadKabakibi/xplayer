@@ -10,7 +10,7 @@ class AddToPlaylist extends Component {
       ...video
     };
   }
-
+  
   onSubmit(event) {
     event.preventDefault();
     const newVideo = {

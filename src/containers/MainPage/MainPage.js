@@ -29,8 +29,8 @@ class MainPage extends Component {
         <div className="app__videos">
           <VideoPlayer
             video={currentVideo}
-            width={500}
-            height={270}
+            width={560}
+            height={315}
           />
           {videos ? <Playlist videos={videos} /> : null}
         </div>

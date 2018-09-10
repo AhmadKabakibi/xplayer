@@ -10,7 +10,6 @@ const VideoPlayer = props => {
     ["youtube", "http://www.youtube.com/embed/"],
     ["vimeo", "http://player.vimeo.com/video/"]
   ]);
-
   const src = `${urlMap.get(getVideoProvider(video.url))}${getIdFromVideoURL(video.url)}`;
 
   return (
@@ -18,6 +17,8 @@ const VideoPlayer = props => {
       title={video.title}
       src={src}
       frameBorder="0"
+      id="player"
+      allow="autoplay; encrypted-media"
       allowFullScreen={true}
       webkitallowfullscreen="true"
       mozallowfullscreen="true"
@@ -39,7 +40,8 @@ const getIdFromVideoURL = videoURL => {
 
 const getVideoProvider = videoURL => {
   const domain = videoURL.split("/")[videoURL.indexOf("//") < 0 ? 0 : 2].split(/[/?:#&]/)[0];
-  return domain.split(".")[1];
+  const domainParts = domain.split(".");
+  return domainParts.length === 3 ? domainParts[1] : domainParts[0];
 };
 
 export default VideoPlayer;
