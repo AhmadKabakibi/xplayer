@@ -1,19 +1,31 @@
-import React from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 import queryString from "query-string";
-
 import "./VideoPlayer.css";
 
-const VideoPlayer = props => {
-  const { video, ...htmlTags } = props;
-  const urlMap = new Map([
-    ["youtube", "http://www.youtube.com/embed/"],
-    ["vimeo", "http://player.vimeo.com/video/"]
-  ]);
-  const src = `${urlMap.get(getVideoProvider(video.url))}${getIdFromVideoURL(video.url)}`;
+class VideoPlayer extends Component {
+  constructor(props) {
+    super(props);
+  }
+  
+  onEnded(event) {
+    event.preventDefault();
+    console.log("video ended re-playing" + event);
+    const iframe = event.currentTarget; //html5-video-container
+    iframe.addEventListener("ended",() => {
+    //this.props.onEnded();
+    })
+  }
 
-  return (
-    <iframe
+  render() {
+    const { video, ...htmlTags } = this.props;
+    const urlMap = new Map([
+      ["youtube", "http://www.youtube.com/embed/"],
+      ["vimeo", "http://player.vimeo.com/video/"]
+    ]);
+    const src = `${urlMap.get(getVideoProvider(video.url))}${getIdFromVideoURL(video.url)}?loop=0`;
+    return (
+      <iframe
       title={video.title}
       src={src}
       frameBorder="0"
@@ -23,9 +35,11 @@ const VideoPlayer = props => {
       webkitallowfullscreen="true"
       mozallowfullscreen="true"
       {...htmlTags}
+      onLoad = {this.onEnded.bind(this)}
     />
-  );
-};
+    );
+  }
+}
 
 VideoPlayer.propTypes = {
   video: PropTypes.object.isRequired

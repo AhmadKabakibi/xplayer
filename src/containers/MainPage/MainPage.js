@@ -3,7 +3,11 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import * as routes from "constants/routes";
 import Playlist from "components/Playlist";
-import VideoPlayer from "components/VideoPlayer";
+
+import YTVideoPlayer from "components/YTVideoPlayer";
+//TODO modify VideoPlayer components with native events onEnd
+//import VideoPlayer from "components/VideoPlayer";
+
 
 import logo from "./logo.svg";
 import "./MainPage.css";
@@ -17,6 +21,19 @@ class MainPage extends Component {
     };
   }
 
+  repeatVideoPlayer (index) {
+    const { videos } = this.state;
+    let videoIndex = index;
+    if (videoIndex < 0) {
+      videoIndex = videos.length - 1;
+    } else if (videoIndex >= videos.length) {
+      videoIndex = 0;
+    }
+    this.setState({
+      videoIndex
+    });
+  }
+
   render() {
     const { videos } = this.state;
     const currentVideo = videos[this.state.videoIndex];
@@ -27,11 +44,8 @@ class MainPage extends Component {
           <h1 className="app-title">XPlayer</h1>
         </header>
         <div className="app__videos">
-          <VideoPlayer
-            video={currentVideo}
-            width={560}
-            height={315}
-          />
+          {/* <VideoPlayer video={currentVideo} width={560} height={315} onEnded={this.repeatVideoPlayer.bind(this)} /> */}
+          <YTVideoPlayer video={currentVideo} onEnd={this.repeatVideoPlayer.bind(this, this.state.videoIndex + 1)} />
           {videos ? <Playlist videos={videos} /> : null}
         </div>
         <div className="button__holder">
