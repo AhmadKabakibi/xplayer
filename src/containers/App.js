@@ -6,7 +6,7 @@ import MainPage from "./MainPage";
 import NewVideo from "./NewVideo";
 
 const App = () => (
-  <Router>
+  <Router basename={process.env.PUBLIC_URL}>
     <Switch>
       <Route exact path={routes.VIDEOS} component={MainPage} />
       <Route exact path={routes.NEW_VIDEO} component={NewVideo} />
