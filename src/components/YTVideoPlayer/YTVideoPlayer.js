@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import queryString from "query-string";
 import YouTube from "react-youtube";
 
 import "./YTVideoPlayer.css";
@@ -28,10 +27,12 @@ VideoPlayer.propTypes = {
 };
 
 const getIdFromVideoURL = videoURL => {
-  const urlParts = videoURL.split("/");
-  const idString = urlParts[urlParts.length - 1];
-  const queryParams = queryString.extract(videoURL);
-  return (queryParams && queryString.parse(queryParams).v) || idString || "";
+  let videoID = videoURL.split("v=")[1];
+  var ampersandPosition = videoID.indexOf("&");  
+  if(ampersandPosition !== -1) {
+    videoID = videoID.substring(0, ampersandPosition);
+  }
+  return videoID;
 };
 
 export default VideoPlayer;

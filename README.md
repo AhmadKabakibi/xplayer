@@ -4,6 +4,7 @@ it will start playing automatically and continuously (when one video ends anothe
 begins, when the playlist reaches an end it starts from the beginning).
 
 ## Demo 
+[XPlayer](https://ahmadkabakibi.github.io/xplayer/) 
 
 ## Install 
 ```bash
@@ -13,9 +14,9 @@ begins, when the playlist reaches an end it starts from the beginning).
 ```bash
   $ npm start
 ```
-## Production build
+#Deploy application
 ```bash
-  $ npm run build
+  $ npm run deploy
 ```
 
 ## Run Test
