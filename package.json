@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "eslint-plugin-prettier": "^2.6.2",
-    "jest-cli": "^23.6.0",
+    "jest-cli": "^24.0.0",
     "prettier": "^1.14.2",
     "gh-pages": "^1.2.0"
   }
