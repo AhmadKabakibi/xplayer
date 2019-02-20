@@ -6,8 +6,8 @@
   "private": true,
   "dependencies": {
     "prop-types": "^15.6.2",
-    "react": "^16.5.0",
-    "react-dom": "^16.5.0",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.5",
@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "eslint-plugin-prettier": "^2.7.0",
-    "jest-cli": "^23.6.0",
+    "jest-cli": "^24.1.0",
     "prettier": "^1.14.2",
     "gh-pages": "^1.2.0"
   }
