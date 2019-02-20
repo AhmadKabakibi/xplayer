@@ -6,16 +6,16 @@
   "private": true,
   "dependencies": {
     "prop-types": "^15.6.2",
-    "react": "^16.5.0",
-    "react-dom": "^16.5.0",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.5",
-    "react-youtube": "^7.6.0",
+    "react-youtube": "^7.9.0",
     "recompose": "^0.30.0",
-    "redux": "^4.0.0",
+    "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",
-    "shortid": "^2.2.13"
+    "shortid": "^2.2.14"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -26,8 +26,8 @@
     "deploy": "gh-pages -d build"
   },
   "devDependencies": {
-    "eslint-plugin-prettier": "^2.6.2",
-    "jest-cli": "^23.6.0",
+    "eslint-plugin-prettier": "^2.7.0",
+    "jest-cli": "^24.1.0",
     "prettier": "^1.16.4",
     "gh-pages": "^1.2.0"
   }
