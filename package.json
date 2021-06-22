@@ -29,6 +29,6 @@
     "eslint-plugin-prettier": "^2.7.0",
     "jest-cli": "^24.1.0",
     "prettier": "^1.16.4",
-    "gh-pages": "^1.2.0"
+    "gh-pages": "^3.2.3"
   }
 }
